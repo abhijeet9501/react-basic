@@ -1,9 +1,13 @@
-import Login from "./pages/login.page";
+import { Outlet } from "react-router-dom";
+import NavBar from "./components/navbar";
+import Footer from "./components/footer";
 
 function App() {
   return (
     <>
-      <Login />
+      <NavBar />
+      <Outlet />
+      <Footer />
     </>
   );
 }

@@ -1,11 +1,11 @@
 function Login() {
   return (
     <div className="w-full h-screen flex justify-center items-center bg-black">
-      <div className="bg-gray-900  rounded-2xl p-8 w-full max-w-sm">
+      <div className="bg-gray-900  rounded-2xl p-8 w-full max-w-sm m-5">
         <h2 className="text-2xl font-bold text-purple-500 text-center mb-6">
           LOGIN
         </h2>
-        <form className="space-y-4">
+        <form className="space-y-4 novalidate">
           <div className="form-control">
             <label className="input input-bordered flex items-center gap-2 validator">
               <svg
@@ -29,7 +29,6 @@ function Login() {
                 pattern="[A-Za-z][A-Za-z0-9\-]*"
                 minLength="3"
                 maxLength="30"
-                title="Only letters, numbers, or dash"
               />
             </label>
             <p className="validator-hint hidden">
@@ -63,7 +62,6 @@ function Login() {
                 required
                 minLength="8"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                title="Must be 8+ characters, including number, lowercase, and uppercase"
               />
             </label>
             <p className="validator-hint hidden">
@@ -74,7 +72,10 @@ function Login() {
               At least one uppercase letter
             </p>
           </div>
-          <button className="btn w-full border-0 bg-purple-500 shadow-lg shadow-purple-500/50">
+          <button
+            className="btn w-full border-0 bg-purple-500 shadow-lg shadow-purple-500/50"
+            type="submit"
+          >
             Login
           </button>
         </form>
